@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>
+	FG		
+	</title>
+<!--This script changes the banner beneath the table to different images-->
+
+<script language="JavaScript">
+	
+
+//The pictures to change
+
+var Rollpic1 = "mortalkombat.bmp";
+var Rollpic2 = "ssbb.bmp";
+var Rollpic3 = "tekken.bmp";
+
+//The picture it starts on
+var PicNumber=1;
+//How many pictures
+var NumberOfPictures=3;
+//How long it waits to switch in-between pictures
+var HowLongBetweenPic=5;
+
+//SwitchPic Function
+function SwitchPic(counter){
+
+	if(counter < HowLongBetweenPic){
+	
+		counter++;
+		
+		window.status="Switch picture at 5 : "+counter+" PicNumber: "+PicNumber+" ";
+		
+		//Display pic in where the image is located
+		document.roll.src = eval("Rollpic" + PicNumber);
+		
+		//function calls itself
+		CallSwitchPic=window.setTimeout("SwitchPic("+counter+")",1500); 
+		
+		}
+		
+		else{
+			//When it isnt the last picture, it will go to the next one
+			if(PicNumber < NumberOfPictures){
+				PicNumber++;
+				SwitchPic(0);
+			}
+			//When it is on the last picture, it will go to the first one
+			else{
+				PicNumber=1;
+				SwitchPic(0);
+				}
+	
+		}
+
+}
+
+</script>
+	</head>
+<link rel="stylesheet" href="style.css">
+<!-- this makes it so when the page loads up, the first banner will be shown first-->
+<body onload="SwitchPic(0)">
+<!--Top banner with the title-->
+<center><img src="FG banner2.png" height="365" width="100%" align="middle"></center>
+
+<br>
+<!-- These are the links to the other pages-->
+
+<center><h1><a href="page 1.html" align="left">  Introduction </a></h1>
+<hidden>_________________</hidden><h1><a href="Page 2.html" align="center-left"> First Person Shooters </a></h1>
+<hidden>_________________</hidden><h1><a href="page 3.html" align="center-right"> Real Time Strategy </a></h1>
+<hidden>_________________</hidden><h1><a href="page 4.html" align="right"> Fighting Games </a></h1></center>
+
+<!-- FG summary-->
+<h2><center><u>Summary of Fighting Games in eSports</u></center></h2>
+<p><em>Fighting games have always been surrounded by tournaments and competitions, but recently their popularity has increased due 
+to the controversy, ever-growing viewing platforms, and the way fighting game developers embrace tournaments and competitions
+</em></p>
+
+
+
+<!-- This table includes the types of FG games and their current developers.-->
+<center><h3> Developers and Their Fighting Games</h3></center>
+<center><table>
+<table border="5px">
+	<tr>
+		<td>Current Developers</td>
+		<td>eSport FG</td>
+		<td>Footage</td>
+	</tr>
+	<tr>
+		<td><img src="nrs.png" height="300" width="400"></td>
+		<td><img src="mortal-kombat.png" height="300" width="400"></td>
+		<td><a href="https://www.youtube.com/watch?v=sfgcuLtcoKk" target="_blank"><h5>Mortal Kombat 9 Tournament Finals</h5></a></td>
+	</tr>
+	<tr>
+		<td><img src="Nintendo.png" height="200" width="400"></td>
+		<td><img src="ssb.png" height="200" width="400"></td>
+		<td><a href="https://www.youtube.com/user/CLASHTournaments" target="_blank"><h5>Super Smash Bros Tournament Youtube Page</h5></a></td>
+	</tr>
+	<tr>
+		<td><img src="BNG.png" height="300" width="400"></td>
+		<td><img src="tekken.png" height="300" width="400"></td>
+		<td><a href="https://www.youtube.com/watch?v=R5BfZKVlOZI" target="_blank"><h5>Tekken Tag Tournament 2 Finals</h5></a></td>
+	</tr>
+</table></center>
+<br>
+<center><img src="mortalkombat.bmp" width="100%" height="250" name="roll"></center>
+<!--Paragraph about controversy in FG eSports-->
+<center><h4> Controversy within FG eSports.</h4></center>
+<p><strong>Although it is technically an eSport, the fighting game community likes to distance themselves from eSports 
+organizations because they do not like how they are organized, sophisticated, and have more rules than they would like.</strong></p>
+<!--Mortal Kombat eSports video-->
+<center><iframe width="1280" height="720" src="https://www.youtube.com/embed/l64MdlY9lKw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></center>
+
+
+
+</body>
+</html>		
+		
+		
+		

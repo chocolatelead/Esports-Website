@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<title>
+	Intro
+	</title>
+<!--This script changes the banner beneath the table to different images-->
+
+<script language="JavaScript">
+	
+
+//The pictures to change
+
+var Rollpic1 = "lan.bmp";
+var Rollpic2 = "mobab.bmp";
+var Rollpic3 = "csgob.png";
+
+//The picture it starts on
+var PicNumber=1;
+//How many pictures
+var NumberOfPictures=3;
+//How long it waits to switch in-between pictures
+var HowLongBetweenPic=5;
+
+//SwitchPic Function
+function SwitchPic(counter){
+
+	if(counter < HowLongBetweenPic){
+	
+		counter++;
+		
+		window.status="Switch picture at 5 : "+counter+" PicNumber: "+PicNumber+" ";
+		
+		//Display pic in where the image is located
+		document.roll.src = eval("Rollpic" + PicNumber);
+		
+		//function calls itself
+		CallSwitchPic=window.setTimeout("SwitchPic("+counter+")",1500); 
+		
+		}
+		
+		else{
+			//When it isnt the last picture, it will go to the next one
+			if(PicNumber < NumberOfPictures){
+				PicNumber++;
+				SwitchPic(0);
+			}
+			//When it is on the last picture, it will go to the first one
+			else{
+				PicNumber=1;
+				SwitchPic(0);
+				}
+	
+		}
+
+}
+
+</script>
+
+	</head>
+<link rel="stylesheet" href="style.css">
+<!-- this makes it so when the page loads up, the first banner will be shown first-->	
+<body onload="SwitchPic(0)">
+<!--Top banner with the title-->
+<center><img src="Intro Banner.png" width="100%" height="365" align="middle" vspace="0px" hspace="0px"></center>
+<br>
+<!-- These are the links to the other pages-->
+<center><h1><a href="page 1.html" align="left">  Introduction </a></h1>
+<hidden>_________________</hidden><h1><a href="Page 2.html" align="center-left"> First Person Shooters </a></h1>
+<hidden>_________________</hidden><h1><a href="page 3.html" align="center-right"> Real Time Strategy </a></h1>
+<hidden>_________________</hidden><h1><a href="page 4.html" align="right"> Fighting Games </a></h1></center>
+
+<!-- Intro summary-->
+<h2><center><u>A Brief Summary Of Electronic Sports</u></center></h2>
+<p><i> ESports is a word for online sports and multiplayer tournaments. Although it is not considered a sport,
+eSports get hundreds of thousands of viewers with million dollar prize pools. The usage of streaming services 
+like Twitch and MLG has increased the popularity and amount of viewers that spectate the tournaments. First 
+person shooter games have less viewership and lower prize pools because of the rise of MOBAs, real time strategy 
+games, and fighting games.</i></p>
+
+<!-- this table includes the most popular eSports broadcasting websites-->
+<center><h3> ESports Viewing Platforms</h3></center>
+<center><table>
+<table border="5px">
+	<tr>
+		<td><img src="tw.png" height="85"><img src="Twitch.png" height="85"></td>
+		<td>Twitch.tv is a streaming website that broadcasts all genres of eSports, excluding CallofDuty. It also allows pro players or regular players to stream regular gameplay.</td>
+	</tr>
+	<tr>
+		<td><img src="mlg.png" height="100"></td>
+		<td>MajorLeagueGaming.com is a website that streams CallofDuty eSports and pro player gameplay.</td>
+	</tr>
+	<tr>
+		<td><img src="UT.png" height="100"><img src="YT.png" height="100"></td>
+		<td>YouTube is a platform that some eSport organizations post tournament info, gameplay, and hype videos to get more viewers on the streaming websites.</td>
+	</tr>
+</table></center>
+<Br>
+<!--Banner-->
+<center><img src="lan.bmp" border="0" width="100%" height="200" name="roll"></center>
+
+<!--Lists about eSport tournaments and games not featured on this website-->
+<style type="text/css">
+ .centered { text-align: center; list-style-position:inside;}
+</style> 
+<center>
+<h6>List of Top Ten eSport Tournaments With The Largest Prize Pools</h6> 
+<ol class="centered" >
+	<li>Dota 2: The International 2014</li>
+	<li>Dota 2: Asia Championships 2015</li>
+	<li>Dota 2: The International 2013</li>
+	<li>Smite: World Championships 2015</li>
+	<li>League Of Legends: Season 4 World Championships 2014</li>
+	<li>League Of Legends: Season 3 World Championships 2013</li>
+	<li>League Of Legends: Season 2 World Championships 2012</li>
+	<li>Dota 2: The International 2012</li>
+	<li>Dota 2: The International 2011</li>
+	<li>Call Of Duty: Championship 2013</li>
+</ol>
+<h6>List of eSport Games Not Featured On This Website</h6>
+<ul class="centered">
+	<li>StarCraft 2</li>
+	<li>Hearthstone</li>
+	<li>World Of Warcraft</li>
+	<li>Street Fighter</li>
+	<li>Quake</li>
+	<li>Fifa</li>
+	<li>Team Fortress 2</li>
+	<li>StarCraft: Brood War</li>
+</ul>
+</center>
+<!--eSports video-->
+<center><iframe width="1280" height="720" src="https://www.youtube.com/embed/GoCQgE4gzbU?rel=0" frameborder="0" allowfullscreen></iframe></center>
+
+
+</body>
+</html>
+<hidden>
+http://adanai.com/esports/
+http://en.wikipedia.org/wiki/Electronic_sports
+http://htmldog.com/guides/html/advanced/embeddedcontent/
+http://en.wikipedia.org/wiki/Multiplayer_online_battle_arena
+http://www.makeuseof.com/tag/why-are-first-person-shooters-not-as-watched-as-other-esports/
+http://www.engadget.com/2013/12/09/not-so-massively-lols-e-sports-controversy-dota-2s-matchmaki/
+http://en.wikipedia.org/wiki/List_of_electronic_sports_titles
+http://www.esportsearnings.com/
+http://www.draac.com/
+</hidden>

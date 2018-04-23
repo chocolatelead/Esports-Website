@@ -1,0 +1,139 @@
+<!DOCTYPE html>	
+
+<html>
+	<head>
+	<title>
+	FPS
+	</title>
+<!--This script changes the banner beneath the table to different images-->
+
+<script language="JavaScript">
+	
+
+//The pictures to change
+
+var Rollpic1 = "csgo.bmp";
+var Rollpic2 = "halo.bmp";
+var Rollpic3 = "cod.bmp";
+
+//The picture it starts on
+var PicNumber=1;
+//How many pictures
+var NumberOfPictures=3;
+//How long it waits to switch in-between pictures
+var HowLongBetweenPic=5;
+
+//SwitchPic Function
+function SwitchPic(counter){
+
+	if(counter < HowLongBetweenPic){
+	
+		counter++;
+		
+		window.status="Switch picture at 5 : "+counter+" PicNumber: "+PicNumber+" ";
+		
+		//Display pic in where the image is located
+		document.roll.src = eval("Rollpic" + PicNumber);
+		
+		//function calls itself
+		CallSwitchPic=window.setTimeout("SwitchPic("+counter+")",1500); 
+		
+		}
+		
+		else{
+			//When it isnt the last picture, it will go to the next one
+			if(PicNumber < NumberOfPictures){
+				PicNumber++;
+				SwitchPic(0);
+			}
+			//When it is on the last picture, it will go to the first one
+			else{
+				PicNumber=1;
+				SwitchPic(0);
+				}
+	
+		}
+
+}
+
+</script>
+	</head>
+<link rel="stylesheet" href="style.css">
+<!-- this makes it so when the page loads up, the first banner will be shown first-->
+<body onload="SwitchPic(0)">
+
+<!--Top banner with the title-->
+<center><img src="fps banner2.png" height="365" width="100%" align="middle" vspace="0px" hspace="0px"></center>
+
+<br>
+<!-- These are the links to the other pages-->
+
+<center><h1><a href="page 1.html" align="left">  Introduction </a></h1>
+<hidden>_________________</hidden><h1><a href="Page 2.html" align="center-left"> First Person Shooters </a></h1>
+<hidden>_________________</hidden><h1><a href="page 3.html" align="center-right"> Real Time Strategy </a></h1>
+<hidden>_________________</hidden><h1><a href="page 4.html" align="right"> Fighting Games </a></h1></center>
+
+<!-- FPS summary-->
+<h2><Center>Summary of First Person Shooters in eSports.</center></h2>
+<p><i> ESports were popularized by first person shooters in the early 2000s, although nowadays they do not get many 
+views as the new more popular eSports genres. First Person Shooters do not get many viewers because the restrictions 
+on viewer experience. First Person Shooters in eSports can only give the spectators the view of the players, so you 
+cannot see much of the gameplay and what is going on throughout the game. FPS games like Halo and Call of Duty also 
+get new releases every year or two years so the eSports have to update every time a new game comes out. 
+Counter Strike: Global Offensive on the other hand was released in 2012, and has had regular updates ever since, which 
+allows the eSports to keep the changes to a minimum. 
+Halo and Call Of Duty are streamed on MLG, while CS:GO is streamed on Twitch.</i></p>
+
+<!-- This table includes the types of FPS games and their current developers.-->
+<center><h3> Developers and Their First Person Shooter Games</h3></center>
+<center><table>
+<table border="5px">
+	<tr>
+		<td>Current Developers</td>
+		<td>FPS eSport Games</td>
+		<td>Footage</td>
+	</tr>
+	<tr>
+		<td><img src="valve.png" height="100" width="400"></td>
+		<td><img src="csgo.png" height="100" width="400"></td>
+		<td><a href="https://www.youtube.com/watch?v=mq0jc4oor98" target="_blank"><h5>CSGO Dreamhack winter 2014 finals</h5> </a></td>
+	</tr>
+	<tr>
+		<td><img src="343.png" height="100" width="400"></td>
+		<td><img src="Halo.png" height="100" width="400"></td>
+		<td><a href="https://www.youtube.com/user/OfficialMLGCoD" target="_blank"><h5>Halo Youtube Page</h5></a></td>
+	</tr>
+	<tr>
+		<td><img src="activision.png" height="100" width="400"></td>
+		<td><img src="cod.png" height="100" width="400"></td>
+		<td><a href="https://www.youtube.com/user/OfficialMLGCoD" target="_blank"><h5>Call Of Duty eSports Youtube Page</h5></td>
+	</tr>
+</table></center>
+<br>
+<center><img src="csgo.bmp" width="100%" height="250" name="roll"></center>
+ <!--Paragraph about controversy in FPS eSports-->
+<center><h4> Controversy within FPS eSports </h4></center>
+<p><strong>     With any sport, there are always scandals. One of CSGO's main features are the 
+gun skins that are purchased and found in unlockable crates using real money, or traded in the market place.
+Players can bet on CSGO eSport games with those gun skins, and if they win they get better, more expensive guns back.
+Some teams have used this to their advantage. They have bet thousands of dollars worth of skins on the other team, 
+and then they throw to match in order to obtain more money in skins than they would have gotten by winning the match.
+The head of CSGO eSports bans any team caught doing this, and takes back the skins. </strong></p>
+<!--CSGO eSports video-->
+<center><iframe width="1280" height="720" src="https://www.youtube.com/embed/taDjVmczVEY?rel=0" frameborder="0" allowfullscreen></iframe></center>
+
+
+
+</body>
+</html>		
+
+
+
+
+
+
+
+
+
+
+
